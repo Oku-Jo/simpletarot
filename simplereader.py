@@ -2,13 +2,12 @@
 
 # Baka has helped me scrape some tables for the cards, I will clean up the tables, export the csv from the google doc, and then add in as a dictionary here.
 # turn the csv into an appropriate dictionary
-# create a class that is "Tarot Deck" which includes keys from tarot dictionary
-# create object/iteration method
+# create a class that is "Tarot Deck" which includes keys from tarot dictionary - nevermind, simpler solution implemented
+# create object/iteration method - nevermind, simpler to create dictionary on each program run and modify the dictionary when drawing cards
 # create method for 3 card draw: past, present, future - pull keys, list key names and return values from above dictionary
-# create a deck object upon user interaction, this has mutable list of dictionary keys, when 'keys' (actually items) from list are pulled they are removed from list, and values from tarot dictionary are called
 # optional - potential room for improvement here - ask user what type of spread they would like (provide multiple choices, ensure any input that isnt one of the choices returns "that wasn't a valid choice, please input valid choice")
 # random module needs to be imported in order to randomize cards that are drawn from deck. randomization should be included in deck object instatiation in order to ensure each reading iteration is entirely unique.
-# if skipping class/object - define function, in function have tarot keys as list, modify list as keys pulled, return keys and corresponding dictionary values with context based on (past/present/future)
+# in the future will add initial option of choosing whether or not to use cp77 deck, will have to have full separate branch of code for that since no up/down values for that.
 
 import random
 import csv
@@ -50,9 +49,3 @@ elif imp == "3":
     tarot_deck.pop(tarotfuture)
 else:
     print("I do not have the functionality right now to provide readings for other spreads, please input either '1' or '3'.")
-
-
-# at this point i am trying to have the orientation generate an up or down value, which will influence the values returned from the tarot_deck key selection. this may require automated dictionary modification, or duplication of the keys,
-# but that is undesireable as it would allow for an individual card to be drawn twice, once in each orientation. ideally each card would be under one key with 2 values assigned, one of which would be shown based on orientation, and then .popped from the dictionary.
-# the .pop might have to happen after the information is displayed but before the next card is drawn, fortunately ive got the tarot temp variable as they key that needs to be popped. see you tomorrow. also also also need to finish output text with placeholders for
-# correct tarot info based on orientation.
