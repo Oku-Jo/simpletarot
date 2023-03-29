@@ -1,13 +1,9 @@
 # Tarot Reader!
 
-# Baka has helped me scrape some tables for the cards, I will clean up the tables, export the csv from the google doc, and then add in as a dictionary here.
-# turn the csv into an appropriate dictionary
-# create a class that is "Tarot Deck" which includes keys from tarot dictionary - nevermind, simpler solution implemented
-# create object/iteration method - nevermind, simpler to create dictionary on each program run and modify the dictionary when drawing cards
-# create method for 3 card draw: past, present, future - pull keys, list key names and return values from above dictionary
-# optional - potential room for improvement here - ask user what type of spread they would like (provide multiple choices, ensure any input that isnt one of the choices returns "that wasn't a valid choice, please input valid choice")
-# random module needs to be imported in order to randomize cards that are drawn from deck. randomization should be included in deck object instatiation in order to ensure each reading iteration is entirely unique.
-# in the future will add initial option of choosing whether or not to use cp77 deck, will have to have full separate branch of code for that since no up/down values for that.
+# Nova has helped me scrape some tables for the cards, I will clean up the tables, export the csv from the google doc, and then add in as a dictionary here. - done
+
+
+
 
 import random
 import csv
@@ -82,15 +78,3 @@ elif imp1 == "n":
         print("I do not have the functionality right now to provide readings for other spreads, please input either '1' or '3'.")
 else:
     print("I can only accept a 'y' or 'n' input. Maybe in the future I will be able to take other inputs for a yes/no question.")
-        
-        
-        
-        
-        
-        
-        # print(tarot)
-        # # print(orientation)
-        # print(tarot_deck[tarot][orientation])
-        # print(tarot)
-        # # print(orientation)
-        # print(tarot_deck[tarot][orientation])
